@@ -65,11 +65,14 @@ export default function GeneratePage() {
     setIsLoading(true);
 
     try {
-      const response = await apiClient.post("/api/blueprints", formData);
+      const response = await apiClient.post(
+        "/api/blueprints/generate",
+        formData,
+      );
 
       if (response.data.success) {
         addToast("Blueprint generated successfully!", "success");
-        router.push(`/blueprint/${response.data.data.id}`);
+        router.push(`/blueprint/${response.data.data._id}`);
       } else {
         addToast(
           response.data.message || "Failed to generate blueprint",
@@ -98,7 +101,7 @@ export default function GeneratePage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
-      <Navigation isAuthenticated={!!session} onLogout={handleLogout} />
+      <Navigation />
 
       <div className="container-padding max-w-2xl mx-auto py-12">
         <motion.div

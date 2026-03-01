@@ -1,21 +1,21 @@
-import jwt from 'jsonwebtoken';
-import { TokenPayload } from '@/types';
+import jwt from "jsonwebtoken";
+import { TokenPayload } from "@/types";
 
-const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-key';
+const JWT_SECRET = process.env.JWT_SECRET || "dev-secret-key";
 const JWT_REFRESH_SECRET =
-  process.env.REFRESH_TOKEN_SECRET || 'dev-refresh-secret-key';
-const JWT_EXPIRY = process.env.JWT_EXPIRATION || '15m';
-const JWT_REFRESH_EXPIRY = process.env.JWT_REFRESH_EXPIRATION || '7d';
+  process.env.REFRESH_TOKEN_SECRET || "dev-refresh-secret-key";
+const JWT_EXPIRY = process.env.JWT_EXPIRATION || "15m";
+const JWT_REFRESH_EXPIRY = process.env.JWT_REFRESH_EXPIRATION || "7d";
 
 export function generateAccessToken(payload: TokenPayload): string {
-  return jwt.sign(payload, JWT_SECRET, {
-    expiresIn: JWT_EXPIRY,
+  return jwt.sign({ ...payload }, JWT_SECRET, {
+    expiresIn: JWT_EXPIRY as any,
   });
 }
 
 export function generateRefreshToken(payload: TokenPayload): string {
-  return jwt.sign(payload, JWT_REFRESH_SECRET, {
-    expiresIn: JWT_REFRESH_EXPIRY,
+  return jwt.sign({ ...payload }, JWT_REFRESH_SECRET, {
+    expiresIn: JWT_REFRESH_EXPIRY as any,
   });
 }
 
