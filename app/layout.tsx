@@ -6,7 +6,7 @@ import { Providers } from "./providers";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Execution Blueprint AI",
+  title: "Blueprint AI",
   description: "Turn startup ideas into complete execution plans",
   viewport: "width=device-width, initial-scale=1",
   icons: {
