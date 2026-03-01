@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --accent: 210 100% 50%;
+  --border: 0 0% 12%;
+  --input: 0 0% 9%;
+  --ring: 0 0% 100%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: hsl(var(--background));
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply tracking-tighter font-semibold;
+}
+
+/* Glassmorphism Evolution */
+.glass-premium {
+  @apply backdrop-blur-xl bg-white/[0.03] border border-white/[0.08] shadow-2xl;
+}
+
+.glass-card {
+  @apply relative overflow-hidden rounded-2xl border border-white/[0.05] bg-gradient-to-br from-white/[0.05] to-transparent backdrop-blur-md;
+}
+
+/* Borders & Lines */
+.border-soft {
+  @apply border-white/[0.05];
+}
+
+/* Text Effects */
+.text-gradient-premium {
+  @apply bg-gradient-to-b from-white to-white/60 bg-clip-text text-transparent;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Animations */
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-reveal {
+  animation: reveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  @apply w-1.5;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-full hover:bg-zinc-700 transition-colors;
+}
+
+/* Buttons Evolution */
+.btn-premium {
+  @apply relative inline-flex items-center justify-center px-8 py-3 rounded-full font-medium transition-all duration-300 active:scale-95;
+}
+
+.btn-primary-premium {
+  @apply btn-premium bg-white text-black hover:bg-neutral-200 shadow-[0_0_20px_rgba(255,255,255,0.1)];
+}
+
+.btn-secondary-premium {
+  @apply btn-premium bg-zinc-900 text-white border border-zinc-800 hover:bg-zinc-800 hover:border-zinc-700;
+}
+
+.btn-ghost-premium {
+  @apply btn-premium text-zinc-400 hover:text-white hover:bg-white/[0.05];
+}
+
+/* Interactive elements */
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.dot-pattern {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 24px 24px;
+}
+
+.cursor-glow {
+  pointer-events: none;
+  position: fixed;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 255, 255, 0.03) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  mix-blend-mode: plus-lighter;
+}
