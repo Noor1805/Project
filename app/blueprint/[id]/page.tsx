@@ -71,15 +71,17 @@ export default function BlueprintDetailPage() {
           >
             ← Back to Dashboard
           </Link>
-          <h1 className="text-4xl font-bold mb-2">{blueprint.ideaTitle}</h1>
+          <h1 className="text-2xl sm:text-4xl font-bold mb-2">
+            {blueprint.ideaTitle}
+          </h1>
           <p className="text-slate-400">{blueprint.ideaDescription}</p>
         </div>
       </div>
 
       {/* Tabs */}
-      <div className="border-b border-slate-800 sticky top-0 bg-slate-950/80 backdrop-blur-sm z-40">
+      <div className="border-b border-slate-800 sticky top-0 bg-slate-950/80 backdrop-blur-sm z-40 overflow-x-auto">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex gap-8 overflow-x-auto">
+          <div className="flex gap-4 sm:gap-8 min-w-max">
             {[
               { id: "overview", label: "Overview" },
               { id: "technical", label: "Technical" },
@@ -105,7 +107,7 @@ export default function BlueprintDetailPage() {
       </div>
 
       {/* Content */}
-      <div className="max-w-6xl mx-auto px-4 py-12">
+      <div className="max-w-6xl mx-auto px-4 py-8 sm:py-12">
         <motion.div
           key={activeTab}
           initial={{ opacity: 0, y: 10 }}

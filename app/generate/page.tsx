@@ -103,14 +103,16 @@ export default function GeneratePage() {
     <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       <Navigation />
 
-      <div className="container-padding max-w-2xl mx-auto py-12">
+      <div className="px-4 sm:px-6 max-w-2xl mx-auto py-28 sm:py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="space-y-8"
         >
           <div>
-            <h1 className="text-4xl font-bold mb-2">Generate Your Blueprint</h1>
+            <h1 className="text-2xl sm:text-4xl font-bold mb-2">
+              Generate Your Blueprint
+            </h1>
             <p className="text-slate-300">
               Tell us about your idea and we'll create a comprehensive execution
               plan

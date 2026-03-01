@@ -38,7 +38,7 @@ export default function Home() {
       <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-48 pb-32 px-6">
+      <section className="relative pt-32 sm:pt-48 pb-16 sm:pb-32 px-4 sm:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl">
             <motion.div
@@ -57,7 +57,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-7xl md:text-9xl font-bold mb-8 leading-[0.9] tracking-tighter"
+              className="text-4xl sm:text-7xl md:text-9xl font-bold mb-6 sm:mb-8 leading-[0.9] tracking-tighter"
             >
               TURN IDEAS <br />
               <span className="text-zinc-500">INTO ACTION.</span>
@@ -67,7 +67,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-xl md:text-2xl text-zinc-400 mb-12 max-w-2xl leading-relaxed"
+              className="text-base sm:text-xl md:text-2xl text-zinc-400 mb-8 sm:mb-12 max-w-2xl leading-relaxed"
             >
               The advanced execution engine for modern founders. Analyze,
               structure, and launch your next venture with precision.
@@ -77,7 +77,7 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
             >
               <Link
                 href="/register"
@@ -97,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-32 px-6 border-t border-white/[0.05]">
+      <section className="py-16 sm:py-32 px-4 sm:px-6 border-t border-white/[0.05]">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {[
@@ -154,11 +154,11 @@ export default function Home() {
       </section>
 
       {/* Critic Mode Overhaul */}
-      <section className="py-32 px-6 bg-zinc-950/50">
+      <section className="py-16 sm:py-32 px-4 sm:px-6 bg-zinc-950/50">
         <div className="max-w-7xl mx-auto">
-          <div className="glass-card p-12 md:p-20 relative overflow-hidden group">
+          <div className="glass-card p-6 sm:p-12 md:p-20 relative overflow-hidden group">
             <div className="relative z-10 max-w-2xl">
-              <h2 className="text-4xl md:text-6xl font-semibold mb-8 tracking-tighter uppercase">
+              <h2 className="text-2xl sm:text-4xl md:text-6xl font-semibold mb-6 sm:mb-8 tracking-tighter uppercase">
                 THE REALITY <br />
                 <span className="text-white/40">CHECK ENGINE.</span>
               </h2>
@@ -193,9 +193,9 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-48 px-6 text-center">
+      <section className="py-24 sm:py-48 px-4 sm:px-6 text-center">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-5xl md:text-7xl font-bold mb-12 tracking-tighter">
+          <h2 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-8 sm:mb-12 tracking-tighter">
             READY TO <br />
             BUILD THE FUTURE?
           </h2>
@@ -209,8 +209,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-white/[0.05] text-zinc-600">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+      <footer className="py-8 sm:py-12 px-4 sm:px-6 border-t border-white/[0.05] text-zinc-600">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-8">
           <div className="flex items-center gap-2">
             <div className="w-6 h-6 bg-zinc-800 rounded flex items-center justify-center text-xs font-black text-zinc-400">
               B

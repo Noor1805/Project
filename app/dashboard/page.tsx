@@ -60,7 +60,7 @@ export default function DashboardPage() {
       <CursorGlow />
       <Navigation />
 
-      <div className="max-w-7xl mx-auto px-8 pt-40 pb-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 pt-28 sm:pt-40 pb-12 sm:pb-20 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export default function DashboardPage() {
           {/* Header Section */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
-              <h1 className="text-5xl md:text-6xl font-extrabold mb-4 tracking-tighter uppercase whitespace-nowrap">
+              <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold mb-4 tracking-tighter uppercase">
                 Command Center<span className="text-zinc-600">.</span>
               </h1>
               <p className="text-lg text-zinc-500 max-w-xl leading-relaxed">
@@ -79,7 +79,7 @@ export default function DashboardPage() {
             </div>
 
             {/* Tab Controller */}
-            <div className="flex p-1 bg-zinc-900 rounded-full border border-white/[0.05]">
+            <div className="flex p-1 bg-zinc-900 rounded-full border border-white/[0.05] w-fit">
               <button
                 onClick={() => setActiveTab("list")}
                 className={`px-8 py-2 rounded-full text-sm font-bold transition-all ${
